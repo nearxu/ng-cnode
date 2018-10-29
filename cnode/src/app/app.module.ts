@@ -13,6 +13,10 @@ import { DashComponent } from './hero/dash.component'
 import { HeroDetailComponent } from './hero/hero-detail.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { NComponent } from './n/n.component';
+import { HomeModule } from './home/home.module';
+
+// import { ListComponent } from './home/component/list/list.component'
+// import { NavComponent } from './home/component/nav.component';
 
 @NgModule({
   declarations: [
@@ -22,15 +26,19 @@ import { NComponent } from './n/n.component';
     DashComponent,
     HeroDetailComponent,
     HeroSearchComponent,
-    NComponent
+    NComponent,
+    // HomeComponent,
+    // ListComponent,
+    // NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    HomeModule
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]

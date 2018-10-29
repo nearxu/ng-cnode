@@ -13,15 +13,15 @@ const httpOptions = {
 })
 export class CnodeService {
   private baseUrl = 'http://cnodejs.org/api/v1/topics'
-  data:[]
+  data: []
   constructor(
     private http: HttpClient,
   ) { }
-  getData():Observable<any>{
+  getData(): Observable<any> {
     return this.http.get<any>(this.baseUrl)
       .pipe(
-      tap(heroes => this.log('fetch heroes')),
-      catchError(this.handleError('getData', []))
+        tap(heroes => this.log('fetch heroes')),
+        catchError(this.handleError('getData', []))
       )
   }
   private log(message: string) {
