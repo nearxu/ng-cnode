@@ -1,0 +1,7 @@
+<div>
+  <form [formGroup]="user" (ngSubmit)="onSubmit()">
+    <label>用户名 <input type="text" formControlName="name" /></label>
+    <label>密码 <input type="password" formControlName="password" /></label>
+    <p><button (click)="login()">登录</button></p>
+  </form>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  <app-tab (change)="onChange($event)"></app-tab>
+  <div *ngFor="let item of items">
+    <app-page-list [item]="item"></app-page-list>
+  </div>
+
+</div>

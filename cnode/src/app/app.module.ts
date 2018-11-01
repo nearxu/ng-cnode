@@ -1,44 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroComponent } from './hero/hero.component';
-import { MessageComponent } from './message/message.component';
-
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
-import { HttpClientModule } from '@angular/common/http';
-import { DashComponent } from './hero/dash.component'
-import { HeroDetailComponent } from './hero/hero-detail.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { NComponent } from './n/n.component';
-import { HomeModule } from './home/home.module';
-
-// import { ListComponent } from './home/component/list/list.component'
-// import { NavComponent } from './home/component/nav.component';
-
+import { HeaderComponent } from './header/header.component';
+import { UserDetailComponent } from './detail/user-detail.component';
+import { ReplyComponent } from './detail/reply.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+// import { TabComponent } from './tab/tab.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroComponent,
-    MessageComponent,
-    DashComponent,
-    HeroDetailComponent,
-    HeroSearchComponent,
-    NComponent,
-    // HomeComponent,
-    // ListComponent,
-    // NavComponent
+    HeaderComponent,
+    // TabComponent,
+    UserDetailComponent,
+    ReplyComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule
-    // HttpClientInMemoryWebApiModule.forRoot(
-    //   InMemoryDataService, { dataEncapsulation: false }
-    // )
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
